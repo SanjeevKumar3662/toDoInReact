@@ -1,4 +1,6 @@
 .item{
+  display: flex;
+  justify-content: space-between;
   border: 1px solid rgb(12, 7, 7);
   /* color: aqua; */
   padding: 10px;
@@ -7,4 +9,16 @@
   background-color: whitesmoke;
   border-radius: 10px;
   border: none;
+}
+
+.deleteBtn{
+  border: none;
+  border-radius: 20%;
+  background-color: coral;
+  padding: 2px 4px;
+  text-align: center;
+}
+
+.deleteBtn:active,button{
+  background-color: rgba(255, 127, 80, 0.676);
 }
