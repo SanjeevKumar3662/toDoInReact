@@ -17,6 +17,10 @@ function App() {
     setVal("");//current val is not needed clear the val
   }
 
+  function deleteItem(item){
+    setList(list.filter((ele=> ele !== item)));
+  }
+
   return (
     <>
       <div className="container">
@@ -43,7 +47,7 @@ function App() {
             and for every element of list we will call the Item componenet
           */}
           {list.map((ele, i) => {
-            return <Item key={i} text={ele}></Item>;
+            return <Item key={i} text={ele} deleteE={()=>deleteItem(ele)}></Item>;
           })}
         </ul>
       </div>
