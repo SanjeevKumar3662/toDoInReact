@@ -1,5 +1,8 @@
+import "./Item.css"
+
+
 export function MakeLi({text}){
   return <>
-  <li>{text}</li>
+  <li className="item">{text} </li>
   </>
 }
