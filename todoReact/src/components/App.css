@@ -1,0 +1,40 @@
+body{
+  background-color: rgba(128, 128, 128, 0.457);
+}
+.container{
+  width: 600px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px auto;
+  background-color: rgba(154, 97, 203, 0.534);
+}
+
+/* input & filter css */
+.input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.input:hover{
+  
+}
+.inputContainer{
+  margin: 30px auto;
+}
+.input-btn{
+  border: none;
+  display: block;
+  margin: 10px auto;
+  padding: 8px 45px;
+  border-radius: 10px;
+  background-color: rgba(255, 127, 80, 0.797);
+}
+
+/*Filter*/
+.filter,.inputContainer{
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(124, 85, 214, 0.365);
+}
