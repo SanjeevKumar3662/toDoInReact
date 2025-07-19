@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Item } from "./Item";
 import "./App.css";
 
 /* TODO
-  -add validations
-  -store and fetch list from local storage
   -make it live on vercel 
 */
 
 function App() {
-  const [val, setVal] = useState("My"); // input value from
-  const [list, setList] = useState(["books - default will an empty arr"]); //list that holds item value
+  const [val, setVal] = useState(""); // input value from
+
+  const [list, setList] = useState(() => {
+    const stored = localStorage.getItem("list"); // gets the json from storage
+    if (stored === undefined) return ["list is empty"]; // if no list, then make and empty one
+
+    console.log(stored," useState-> only once at start"); //logging list
+
+    return JSON.parse(stored); //parses json to an array and returns it
+  });
+
+  useEffect(() => {
+    localStorage.setItem("list", JSON.stringify(list)); //stores updated list to storage
+    console.log(list,"in useEffect -> when list is modified");
+  }, [list]); // when an ele of arr is modified, it triggers the CB function
 
   function updateVal(e) {
     setVal(e.target.value);
@@ -37,7 +48,7 @@ function App() {
         <h1>{val} Sanjeev's first react project</h1>
         <form className="inputContainer">
           <input
-            value={val}// this makes val a controled input
+            value={val} // this makes val a controled input
             onChange={updateVal}
             className="input"
             type="text"
