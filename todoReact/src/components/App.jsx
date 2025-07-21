@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>{val} Sanjeev's first react project</h1>
+        <h1>{val} Sanjeev's first React.js project</h1>
         <form className="inputContainer">
           <input
             value={val} // this makes val a controled input
