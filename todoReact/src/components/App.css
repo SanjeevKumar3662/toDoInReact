@@ -17,8 +17,9 @@ body{
   border-radius: 10px;
   border: none;
 }
-.input:hover{
-  
+.input-btn:hover{
+  background-color: coral;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.292);
 }
 .inputContainer{
   margin: 30px auto;
