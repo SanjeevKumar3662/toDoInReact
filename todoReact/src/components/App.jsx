@@ -1,9 +1,8 @@
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState} from "react";
 import { Item } from "./Item";
 import "./App.css";
 
 /* TODO
-  -search
   -make it live on vercel 
 */
 
