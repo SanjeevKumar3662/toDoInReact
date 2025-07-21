@@ -11,15 +11,15 @@ function App() {
 
   const [list, setList] = useState(() => {
     const stored = localStorage.getItem("list"); // gets the json from storage
-    if (stored === undefined) return ["list is empty"]; // if no list, then make and empty one
+    if (stored === null) return ["list is empty"]; // if no list, then make and empty one
 
     console.log(stored, " useState-> only once at start"); //logging list
 
     return JSON.parse(stored); //parses json to an array and returns it
   });
 
-  const [isSearching,upadateSearching] = useState();
-  const [filterdList, updateFL] = useState();
+  const [isSearching,upadateSearching] = useState(false);// dafault is false
+  const [filterdList, updateFL] = useState([]);//default should be []
 
   useEffect(() => {
     localStorage.setItem("list", JSON.stringify(list)); //stores updated list to storage
